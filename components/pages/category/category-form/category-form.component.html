@@ -1,0 +1,17 @@
+<div class="form-group" [formGroup]="form">
+  <label for="name">Nome</label>
+  <input type="text"
+         class="form-control"
+         id="name"
+         isInvalid
+         formControlName="name">
+
+  <field-error [field]="form.get('name')"
+               [label]="fieldOptions.name.label"
+               [messages]="fieldOptions.name.validationMessage"></field-error>
+
+</div>
+<div class="form-group form-check" [formGroup]="form">
+  <input type="checkbox" class="form-check-input" id="active" name="active" formControlName="active">
+  <label for="name">Ativo?</label>
+</div>
